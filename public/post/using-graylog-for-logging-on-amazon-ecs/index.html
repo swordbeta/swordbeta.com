@@ -72,7 +72,7 @@ We tried numerous LaaS (Logging as a Service), but they all were lacking in one 
 
 <h2 id="logging-drivers">Logging drivers</h2>
 
-<p>Docker supports various logging drivers, such as json-file, gelf, syslog and <a href="https://docs.docker.com/engine/admin/logging/overview/#supported-logging-drivers" target="_blank">more</a>. The default logging driver is json-file which simply captures stdout and stderr of a container and puts that in a JSON object with some metadata. Gelf is a protocol designed and used by Graylog. It&rsquo;s basically a dict with the log message and some metadata that is sent chunked over UDP. Chunked because UDP has a limit of about 65 kilobytes and logs can be quite big (when logging SOAP requests for example). There are two ways to setup Graylog on AWS ECS.</p>
+<p>Docker supports various logging drivers, such as json-file, gelf, syslog and <a href="https://docs.docker.com/engine/admin/logging/overview/#supported-logging-drivers" target="_blank">more</a>. The default logging driver is json-file which simply captures stdout and stderr of a container and puts that in a JSON object with some metadata. Gelf is a format designed and used by Graylog. It&rsquo;s basically a dict with the log message and some metadata that is sent chunked over UDP. Chunked because UDP has a limit of about 65 kilobytes and logs can be quite big (when logging SOAP requests for example). There are two ways to setup Graylog on AWS ECS.</p>
 
 <p>The first being using the gelf driver and having to add the required gelf-address log option and the optional gelf-compression-type, gelf-compression-level, tag, labels and env log options. This meant we had to edit all of our 26 task definitions, making sure our CI had the correct configuration and making sure task definitions in the future will also have the correct options set.</p>
 
@@ -109,7 +109,7 @@ We tried numerous LaaS (Logging as a Service), but they all were lacking in one 
 }
 </code></pre>
 
-<p>A default logspout environment is only able to send logs to a server that accepts syslogs. Graylog is able to receive syslogs but we actually really want to use gelf. If you want to send logs over gelf replace the <code>gliderlabs/logspout</code> image with <code>vincit/logspout-gelf</code>, which is an image with a gelf third-party adapter pre-installed. Replace <code>udp://graylog.example.org:1514</code> with <code>gelf://graylog.example.org:1514</code> and you&rsquo;re set. Happy logging!</p>
+<p>A default logspout environment is only able to send logs to a server that accepts syslogs. Graylog is able to receive syslogs but with syslog we can&rsquo;t tell from what container or image a log message came from. With the gelf adapter for logspout you&rsquo;re able to see that information. If you want to send logs over gelf replace the <code>gliderlabs/logspout</code> image with <code>vincit/logspout-gelf</code>, which is an image with a gelf third-party adapter pre-installed. Replace <code>udp://graylog.example.org:1514</code> with <code>gelf://graylog.example.org:1514</code> and you&rsquo;re set. Happy logging!</p>
 			</div>
 
 			
