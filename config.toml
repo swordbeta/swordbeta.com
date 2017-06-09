@@ -1,0 +1,9 @@
+baseURL = "https://swordbeta.com"
+languageCode = "en-us"
+title = "swordbeta's blog"
+theme = "hyde"
+[params]
+  themeColor = "theme-base-0c"
+
+[blackfriday]
+  hrefTargetBlank = true
