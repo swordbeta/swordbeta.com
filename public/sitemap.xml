@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://swordbeta.com/post/using-graylog-for-logging-on-amazon-ecs/</loc>
+    <lastmod>2017-06-08T21:29:34+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://swordbeta.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://swordbeta.com/post/</loc>
+    <lastmod>2017-06-08T21:29:34+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://swordbeta.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://swordbeta.com/</loc>
+    <lastmod>2017-06-08T21:29:34+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
