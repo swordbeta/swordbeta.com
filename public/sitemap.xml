@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://swordbeta.com/post/debugging-in-phpstorm-with-xdebug-locally-in-vagrant-or-in-docker/</loc>
+    <lastmod>2017-09-05T21:33:40+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://swordbeta.com/post/using-graylog-for-logging-on-amazon-ecs/</loc>
     <lastmod>2017-06-08T21:29:34+02:00</lastmod>
   </url>
@@ -14,7 +19,7 @@
   
   <url>
     <loc>https://swordbeta.com/post/</loc>
-    <lastmod>2017-06-08T21:29:34+02:00</lastmod>
+    <lastmod>2017-09-05T21:33:40+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -25,7 +30,7 @@
   
   <url>
     <loc>https://swordbeta.com/</loc>
-    <lastmod>2017-06-08T21:29:34+02:00</lastmod>
+    <lastmod>2017-09-05T21:33:40+02:00</lastmod>
     <priority>0</priority>
   </url>
   
