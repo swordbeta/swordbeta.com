@@ -11,7 +11,7 @@
             </a>
           </h1>
           <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
-          {{ .Summary }} <a href="{{ .RelPermalink }}">Read more...</a>
+          <div class="post-summary">{{ .Summary }}</div> <a href="{{ .RelPermalink }}">Read more...</a>
         </div>
         {{ end }}
       </div>

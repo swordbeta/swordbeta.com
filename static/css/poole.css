@@ -303,9 +303,12 @@ tbody tr:nth-child(odd) th {
 
 .page,
 .post {
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 }
 
+.post-summary p {
+  margin-bottom: 0;
+}
 /* Blog post or page title */
 .page-title,
 .post-title,
