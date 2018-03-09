@@ -1,0 +1,102 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.29-DEV" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>Hosting H2O Flow and Steam &middot; swordbeta&#39;s blog</title>
+  
+
+  
+  <link rel="stylesheet" href="https://swordbeta.com/css/poole.css">
+  <link rel="stylesheet" href="https://swordbeta.com/css/syntax.css">
+  <link rel="stylesheet" href="https://swordbeta.com/css/hyde.css">
+  <link rel="stylesheet" href="https://swordbeta.com/css/custom.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="shortcut icon" href="https://swordbeta.com/images/favicon.ico">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="swordbeta&#39;s blog" />
+  
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-24187741-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+	<body class="theme-base-0c ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://swordbeta.com/"><img src="https://s.gravatar.com/avatar/849871a025344d191ad9fa458380bf49?s=400" class="avatar" />
+      <h1>swordbeta</h1></a>
+      <p class="subtitle">Michael van Tricht</p>
+      <p class="lead">
+        Developer &amp; Gopher
+      </p>
+      <p class="links">
+        <a href="https://github.com/swordbeta" target="_blank"><img src="https://swordbeta.com/images/github.png" /></a>
+        <a href="https://www.linkedin.com/in/michael-van-tricht-a6468927/" target="_blank"><img src="https://swordbeta.com/images/linkedin.png" /></a>
+        <a href="https://steamcommunity.com/id/delishizu/" target="_blank"><img src="https://swordbeta.com/images/steam.png" /></a>
+        <a href="https://twitter.com/swordbeta" target="_blank"><img src="https://swordbeta.com/images/twitter.png" /></a>
+      </p>
+      <p class="clear"></p>
+    </div>
+    <p>&copy; 2018. All rights reserved. </p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>Hosting H2O Flow and Steam</h1>
+			  <span class="post-date">Thu, Mar 8, 2018</span>
+			      <p><a href="https://www.h2o.ai/" target="_blank">H2O</a> is an open source machine learning platform. With H2O Flow you&rsquo;re able to train models through a web interface, R or python. With H2O Steam you&rsquo;re able to deploy the trained models, allowing you to call a HTTP endpoint to predict user behavior. Are you planning to host Flow and Steam on your own server? Here are a few things we learned by doing.
+</p>
+
+<p>Getting H2O up and running is rather simple. It consists of two .jar files you have to download and run. The <a href="http://docs.h2o.ai/" target="_blank">docs</a> are great for getting started.</p>
+
+<p>When we started, we started off by separating flow and Steam between two servers. We did this because the Steam deployments are continuously under heavy load predicting user behavior. And we don&rsquo;t want flow, which would be training new models using the full CPU, to interfere with these deployments.</p>
+
+<h2 id="steam-doesn-t-keep-deployments-running">Steam doesn&rsquo;t keep deployments running</h2>
+
+<p>Once we had our servers up and trained our models, we started deploying the models and using them. This goes all smoothly through Steam&rsquo;s web interface.</p>
+
+<p>Sadly, however after a reboot of the server to increase the RAM, we found out none of the Steam deployments were actually running. When you deploy an endpoint Steam compiles it to a <code>.war</code> file, starts it and stores the process ID in it&rsquo;s SQLite database. But Steam doesn&rsquo;t manage the deployment. So once the deployment is killed for whatever reason, some parts of the UI become unresponsive.</p>
+
+<p>To fix this, we created a rather simple Go application called the <a href="https://github.com/ExpandOnline/h2o-steam-overseer" target="_blank">h2o-steam-overseer</a> which is open source and can be found on github. What does it do? Using the Steam SQLite database it fetches the process ID of the deployments and checks if they&rsquo;re running. If they&rsquo;re not running it starts the deployment and updates the SQLite database with the correct process ID. We run the h2o-steam-overseer every 30 minutes through the crontab like so;</p>
+
+<p><code>30 * * * * /home/steam/h2o-steam-overseer /home/steam/steam-1.1.6-linux-amd64</code></p>
+
+<h2 id="r-and-flow-s-savemodel-and-loadmodel-functions">R and Flow&rsquo;s saveModel and loadModel functions</h2>
+
+<p>The R library for H2O Flow has two functions called <code>saveModel</code> and <code>loadModel</code>. These functions are self-explanatory, they save and load a model respectively. But what isn&rsquo;t self-explanatory is that when you call these functions from your R studio, the models are saved and loaded on the <em>server</em> not on the machine where R studio is running. This isn&rsquo;t something that&rsquo;s very intuitive and we make sure to store in a directory that&rsquo;s recognizable eg. <code>~/models/customer-name/trained-model-march-2018</code>.</p>
+
+<h2 id="don-t-forget-to-backup">Don&rsquo;t forget to backup</h2>
+
+<p>We simply backup the entire H2O Flow and Steam directories. If you want to be more specific;</p>
+
+<ol>
+<li>For H2O Flow you&rsquo;d backup wherever you saved your trained models.</li>
+<li>For H2O Steam you&rsquo;d backup the directory containing all model deployments which would be <code>~/steam/var/master/model</code>.</li>
+</ol>
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>
