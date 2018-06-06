@@ -2,7 +2,6 @@ baseURL = "https://swordbeta.com/"
 languageCode = "en-us"
 title = "swordbeta's blog"
 theme = "hyde"
-googleAnalytics = "UA-24187741-1"
 Paginate = 5
 [params]
   themeColor = "theme-base-0c"
