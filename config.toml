@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "swordbeta's blog"
 theme = "hyde"
 Paginate = 5
+publishDir = "docs"
 [params]
   themeColor = "theme-base-0c"
 
