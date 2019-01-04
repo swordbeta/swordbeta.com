@@ -17,8 +17,7 @@
       <pubDate>Thu, 08 Mar 2018 20:25:00 +0200</pubDate>
       
       <guid>https://swordbeta.com/post/hosting-h2o-flow-and-steam/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.h2o.ai/&#34; target=&#34;_blank&#34;&gt;H2O&lt;/a&gt; is an open source machine learning platform. With H2O Flow you&amp;rsquo;re able to train models through a web interface, R or python. With H2O Steam you&amp;rsquo;re able to deploy the trained models, allowing you to call a HTTP endpoint to predict user behavior. Are you planning to host Flow and Steam on your own server? Here are a few things we learned by doing.
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.h2o.ai/&#34; target=&#34;_blank&#34;&gt;H2O&lt;/a&gt; is an open source machine learning platform. With H2O Flow you&amp;rsquo;re able to train models through a web interface, R or python. With H2O Steam you&amp;rsquo;re able to deploy the trained models, allowing you to call a HTTP endpoint to predict user behavior. Are you planning to host Flow and Steam on your own server? Here are a few things we learned by doing.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,8 +26,7 @@
       <pubDate>Tue, 05 Sep 2017 21:33:40 +0200</pubDate>
       
       <guid>https://swordbeta.com/post/debugging-in-phpstorm-with-xdebug-locally-in-vagrant-or-in-docker/</guid>
-      <description>&lt;p&gt;Do you use PhpStorm and have you ever wondered what all those fancy debugging features were? Or could you just not get Xdebug running in Docker or your Vagrant machine? Wonder no more!
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;Do you use PhpStorm and have you ever wondered what all those fancy debugging features were? Or could you just not get Xdebug running in Docker or your Vagrant machine? Wonder no more!&lt;/p&gt;</description>
     </item>
     
     <item>
