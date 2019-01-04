@@ -1,4 +1,4 @@
-baseURL = "https://swordbeta.com/"
+baseURL = "http://swordbeta.com/"
 languageCode = "en-us"
 title = "swordbeta's blog"
 theme = "hyde"
