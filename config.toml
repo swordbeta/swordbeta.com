@@ -1,6 +1,6 @@
-baseURL = "https://swordbeta.com/"
+baseURL = "https://tricht.dev/"
 languageCode = "en-us"
-title = "swordbeta's blog"
+title = "Michael's blog"
 theme = "hyde"
 Paginate = 5
 publishDir = "docs"
