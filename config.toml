@@ -5,7 +5,7 @@ theme = "hyde"
 Paginate = 5
 publishDir = "docs"
 [params]
-  themeColor = "theme-base-0c"
+  themeColor = "theme-base-0"
 
 [blackfriday]
   hrefTargetBlank = true
