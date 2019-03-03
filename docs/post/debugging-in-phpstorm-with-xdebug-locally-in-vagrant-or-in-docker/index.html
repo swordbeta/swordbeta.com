@@ -9,25 +9,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   
-  <title>Debugging in PhpStorm with Xdebug locally, in Vagrant or in Docker &middot; swordbeta&#39;s blog</title>
+  <title>Debugging in PhpStorm with Xdebug locally, in Vagrant or in Docker &middot; Michael&#39;s blog</title>
   
 
   
-  <link rel="stylesheet" href="https://swordbeta.com/css/poole.css">
-  <link rel="stylesheet" href="https://swordbeta.com/css/syntax.css">
-  <link rel="stylesheet" href="https://swordbeta.com/css/hyde.css">
-  <link rel="stylesheet" href="https://swordbeta.com/css/custom.css">
+  <link rel="stylesheet" href="https://tricht.dev/css/poole.css">
+  <link rel="stylesheet" href="https://tricht.dev/css/syntax.css">
+  <link rel="stylesheet" href="https://tricht.dev/css/hyde.css">
+  <link rel="stylesheet" href="https://tricht.dev/css/custom.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   
-  <link rel="shortcut icon" href="https://swordbeta.com/images/favicon.ico">
+  <link rel="shortcut icon" href="https://tricht.dev/images/favicon.ico">
 
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 
   
-  <link href="" rel="alternate" type="application/rss+xml" title="swordbeta&#39;s blog" />
+  <link href="" rel="alternate" type="application/rss+xml" title="Michael&#39;s blog" />
   
   <meta name="google-site-verification" content="dCGfz1Hn43hZ_k0uE4ptsmK6K4K9R8RGZsZx18IhgXs" />
 </head>
@@ -36,16 +36,16 @@
   <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="https://swordbeta.com/"><img src="https://s.gravatar.com/avatar/849871a025344d191ad9fa458380bf49?s=400" class="avatar" />
+      <a href="https://tricht.dev/"><img src="https://s.gravatar.com/avatar/849871a025344d191ad9fa458380bf49?s=400" class="avatar" />
       <h1>swordbeta</h1></a>
       <p class="subtitle">Michael van Tricht</p>
       <p class="lead">
         Software Engineer
       </p>
       <p class="links">
-        <a href="https://github.com/swordbeta" target="_blank"><img src="https://swordbeta.com/images/github.png" /></a>
-        <a href="https://www.linkedin.com/in/michael-van-tricht-a6468927/" target="_blank"><img src="https://swordbeta.com/images/linkedin.png" /></a>
-        <a href="https://twitter.com/swordbeta" target="_blank"><img src="https://swordbeta.com/images/twitter.png" /></a>
+        <a href="https://github.com/mtricht" target="_blank"><img src="https://tricht.dev/images/github.png" /></a>
+        <a href="https://www.linkedin.com/in/michael-van-tricht-a6468927/" target="_blank"><img src="https://tricht.dev/images/linkedin.png" /></a>
+        <a href="https://twitter.com/swordbeta" target="_blank"><img src="https://tricht.dev/images/twitter.png" /></a>
       </p>
       <p class="clear"></p>
     </div>
@@ -66,7 +66,7 @@
 <li>Debugging in Phpstorm</li>
 </ul>
 
-<p>You can follow along with the <a href="https://github.com/swordbeta/xdebug-example" target="_blank">xdebug-example</a> github repository I have used throughout this guide.</p>
+<p>You can follow along with the <a href="https://github.com/mtricht/xdebug-example" target="_blank">xdebug-example</a> github repository I have used throughout this guide.</p>
 
 <h2 id="setting-up-xdebug">Setting up Xdebug</h2>
 
@@ -104,7 +104,7 @@ xdebug.remote_autostart = 1
 
 <p>If you&rsquo;re running your PHP code locally, there&rsquo;s no need to configure anything in Phpstorm. If you&rsquo;re running things in docker or Vagrant, you need to setup the path mapping first. Withouth the path mapping Phpstorm wouldn&rsquo;t debug anything because the file paths wouldn&rsquo;t match.</p>
 
-<p>Open the settings window and browse to Languages &amp; Frameworks &gt; PHP &gt; Servers. Add a new server pointing to the publicly accessible host and port. If you&rsquo;re following along with the <code>swordbeta/xdebug-example</code> repository from github, for vagrant this would be host <code>127.0.0.1</code> and port <code>8001</code>. Check the <code>Use path mappings</code> checkbox and map the paths. For my repository and vagrant this would be:</p>
+<p>Open the settings window and browse to Languages &amp; Frameworks &gt; PHP &gt; Servers. Add a new server pointing to the publicly accessible host and port. If you&rsquo;re following along with the <code>mtricht/xdebug-example</code> repository from github, for vagrant this would be host <code>127.0.0.1</code> and port <code>8001</code>. Check the <code>Use path mappings</code> checkbox and map the paths. For my repository and vagrant this would be:</p>
 
 <p><img src="/images/phpstorm-server.png" alt="Phpstorm server configuration" /></p>
 

@@ -3,39 +3,39 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://swordbeta.com/post/hosting-h2o-flow-and-steam/</loc>
+    <loc>https://tricht.dev/post/hosting-h2o-flow-and-steam/</loc>
     <lastmod>2018-03-08T20:25:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://swordbeta.com/post/debugging-in-phpstorm-with-xdebug-locally-in-vagrant-or-in-docker/</loc>
+    <loc>https://tricht.dev/post/debugging-in-phpstorm-with-xdebug-locally-in-vagrant-or-in-docker/</loc>
     <lastmod>2017-09-05T21:33:40+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://swordbeta.com/post/using-graylog-for-logging-on-amazon-ecs/</loc>
+    <loc>https://tricht.dev/post/using-graylog-for-logging-on-amazon-ecs/</loc>
     <lastmod>2017-06-08T21:29:34+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://swordbeta.com/categories/</loc>
+    <loc>https://tricht.dev/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://swordbeta.com/post/</loc>
+    <loc>https://tricht.dev/</loc>
     <lastmod>2018-03-08T20:25:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://swordbeta.com/tags/</loc>
+    <loc>https://tricht.dev/post/</loc>
+    <lastmod>2018-03-08T20:25:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://swordbeta.com/</loc>
-    <lastmod>2018-03-08T20:25:00+02:00</lastmod>
+    <loc>https://tricht.dev/tags/</loc>
     <priority>0</priority>
   </url>
   
