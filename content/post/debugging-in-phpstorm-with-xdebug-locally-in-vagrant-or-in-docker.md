@@ -13,7 +13,7 @@ In this guide I will guide you through
 - Setting up Xdebug locally, in vagrant or in docker
 - Debugging in Phpstorm
 
-You can follow along with the [xdebug-example](https://github.com/swordbeta/xdebug-example) github repository I have used throughout this guide.
+You can follow along with the [xdebug-example](https://github.com/mtricht/xdebug-example) github repository I have used throughout this guide.
 
 ## Setting up Xdebug
 
@@ -53,7 +53,7 @@ Once you're done configuring, restart apache, nginx, php-fpm or whatever you use
 
 If you're running your PHP code locally, there's no need to configure anything in Phpstorm. If you're running things in docker or Vagrant, you need to setup the path mapping first. Withouth the path mapping Phpstorm wouldn't debug anything because the file paths wouldn't match.
 
-Open the settings window and browse to Languages & Frameworks > PHP > Servers. Add a new server pointing to the publicly accessible host and port. If you're following along with the `swordbeta/xdebug-example` repository from github, for vagrant this would be host `127.0.0.1` and port `8001`. Check the `Use path mappings` checkbox and map the paths. For my repository and vagrant this would be:
+Open the settings window and browse to Languages & Frameworks > PHP > Servers. Add a new server pointing to the publicly accessible host and port. If you're following along with the `mtricht/xdebug-example` repository from github, for vagrant this would be host `127.0.0.1` and port `8001`. Check the `Use path mappings` checkbox and map the paths. For my repository and vagrant this would be:
 
 ![Phpstorm server configuration](/images/phpstorm-server.png)
 
