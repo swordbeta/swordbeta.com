@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Michael&#39;s blog</title>
+    <title>Michael van Tricht</title>
     <link>https://tricht.dev/</link>
-    <description>Recent content on Michael&#39;s blog</description>
+    <description>Recent content on Michael van Tricht</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 08 Mar 2018 20:25:00 +0200</lastBuildDate>
@@ -37,6 +37,16 @@
       <guid>https://tricht.dev/post/using-graylog-for-logging-on-amazon-ecs/</guid>
       <description>&lt;p&gt;At work we use &lt;a href=&#34;https://aws.amazon.com/ecs/&#34; target=&#34;_blank&#34;&gt;AWS ECS&lt;/a&gt; (Amazon EC2 Container Service) for orchestrating our docker containers. We have a rather small
 number of containers running (26~) which all log to &lt;a href=&#34;https://aws.amazon.com/cloudwatch/&#34; target=&#34;_blank&#34;&gt;CloudWatch&lt;/a&gt;. Being unsatisfied by the features such as alerting we started looking for a better logging solution.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://tricht.dev/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tricht.dev/about/</guid>
+      <description>Hi, I&amp;rsquo;m Michael van Tricht. A Full Stack Developer based in The Netherlands.
+Languages  Java (Spring Boot) Go PHP (Laravel, Lumen, Symfony, Slim, CakePHP, CodeIgniter) NodeJS (Express, React) Python (Flask)  Technologies, tools and more SCRUM, Test Driven Development, Design Patterns, UML, MySQL, MongoDB, PostgreSQL, SQLserver, AWS, Google Cloud, Linux, CentOS, Ubuntu, Arch Linux, Docker, Kubernetes, Jenkins, SonarQube, Grafana, Graylog, Prometheus, , Git, Github, Nexus, Jira, XML, REST, SOAP, XSLT, PhpStorm, IntelliJ, Postman, SoapUI, Trello, LDAP and many more&amp;hellip;</description>
     </item>
     
   </channel>

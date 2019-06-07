@@ -19,7 +19,7 @@ You can follow along with the [xdebug-example](https://github.com/mtricht/xdebug
 
 Xdebug is a PHP extension developed by Derick Rethans for debugging using the DBGp protocol. Xdebug is the only debugging tool to implement the DBGp protocol. If you're on linux and use PECL, you can use the following command:
 
-~~~bash
+~~~sh
 $ pecl install xdebug
 ~~~
 
