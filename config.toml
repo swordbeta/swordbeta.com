@@ -43,7 +43,7 @@ pygmentscodefencesguesssyntax = true
     name = "Mail"
     icon = "fa fa-envelope fa-2x"
     weight = 2
-    url = "michael@tricht.dev"
+    url = "mailto:michael@tricht.dev"
 
 # Menu links
 [[menu.main]]
