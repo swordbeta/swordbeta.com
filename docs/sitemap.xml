@@ -4,19 +4,24 @@
   
   <url>
     <loc>https://tricht.dev/</loc>
-    <lastmod>2019-08-03T13:48:45+02:00</lastmod>
+    <lastmod>2019-08-03T22:11:32+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tricht.dev/post/</loc>
-    <lastmod>2019-08-03T13:48:45+02:00</lastmod>
+    <lastmod>2019-08-03T22:11:32+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://tricht.dev/post/systemd-spring-shell/</loc>
+    <lastmod>2019-08-03T22:11:32+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tricht.dev/post/software-i-self-host-on-my-personal-vps/</loc>
-    <lastmod>2019-08-03T13:48:45+02:00</lastmod>
+    <lastmod>2019-07-21T16:48:45+02:00</lastmod>
   </url>
   
   <url>

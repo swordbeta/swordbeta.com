@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2019-08-03T13:48:45+02:00
+date = 2019-07-21T16:48:45+02:00
 title = "Software I self-host on my personal VPS"
 slug = "software-i-self-host-on-my-personal-vps" 
 +++
