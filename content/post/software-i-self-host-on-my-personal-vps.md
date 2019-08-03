@@ -5,7 +5,7 @@ title = "Software I self-host on my personal VPS"
 slug = "software-i-self-host-on-my-personal-vps" 
 +++
 
-I try to avoid cloud services because I want to be in control of my data. This is why I self-host software on my personal VPS whenever there is a viable self-hosted alternative. This VPS is nothing impressive but does its job well. It runs the latest CentOS on a VPS with 1 vCPU, 2GB of RAM, a 50GB SSD and 2TB of bandwidth running on [DigitalOcean](https://m.do.co/c/eb6358832805) (this is a referral link, giving you $50 credit when signing up!) costing me about $15 per month (including backups).
+I try to avoid cloud services because I want to be in control of my data. This is why I self-host software on my personal VPS whenever there is a viable self-hosted alternative. This VPS is nothing impressive but does its job well. It runs the latest CentOS on a VPS with 1 vCPU, 2GB of RAM, a 50GB SSD and 2TB of bandwidth costing me about $15 per month (including backups). After hopping between several VPS hosts, I stuck with [DigitalOcean](https://m.do.co/c/eb6358832805) (this is a referral link, giving you $50 credit when signing up!).
 
 So, what do I run?
 
