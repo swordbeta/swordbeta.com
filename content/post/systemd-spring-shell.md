@@ -18,4 +18,4 @@ the interactiveness of the shell by adding the following to your `application.pr
 spring.shell.interactive.enabled=false
 ```
 
-Perhaps a better solution would be to separate the two into two jars or applications, but this is not what you want to do when prototyping.
+Perhaps a better solution would be to separate the two into two jars or applications, but not when prototyping.
