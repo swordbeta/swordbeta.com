@@ -3,20 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://tricht.dev/post/hosting-h2o-flow-and-steam/</loc>
-    <lastmod>2018-03-08T20:25:00+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tricht.dev/</loc>
-    <lastmod>2018-03-08T20:25:00+02:00</lastmod>
+    <lastmod>2019-08-03T13:48:45+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tricht.dev/post/</loc>
-    <lastmod>2018-03-08T20:25:00+02:00</lastmod>
+    <lastmod>2019-08-03T13:48:45+02:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tricht.dev/post/software-i-self-host-on-my-personal-vps/</loc>
+    <lastmod>2019-08-03T13:48:45+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tricht.dev/post/hosting-h2o-flow-and-steam/</loc>
+    <lastmod>2018-03-08T20:25:00+02:00</lastmod>
   </url>
   
   <url>

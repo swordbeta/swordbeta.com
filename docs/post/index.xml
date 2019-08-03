@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Michael van Tricht</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Mar 2018 20:25:00 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 03 Aug 2019 13:48:45 +0200</lastBuildDate>
     
 	<atom:link href="https://tricht.dev/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Software I self-host on my personal VPS</title>
+      <link>https://tricht.dev/post/software-i-self-host-on-my-personal-vps/</link>
+      <pubDate>Sat, 03 Aug 2019 13:48:45 +0200</pubDate>
+      
+      <guid>https://tricht.dev/post/software-i-self-host-on-my-personal-vps/</guid>
+      <description>I try to avoid cloud services because I want to be in control of my data. This is why I self-host software on my personal VPS whenever there is a viable self-hosted alternative. This VPS is nothing impressive but does its job well. It runs the latest CentOS on a VPS with 1 vCPU, 2GB of RAM, a 50GB SSD and 2TB of bandwidth running on DigitalOcean (this is a referral link, giving you $50 credit when signing up!</description>
+    </item>
     
     <item>
       <title>Hosting H2O Flow and Steam</title>
