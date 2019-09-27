@@ -1,4 +1,4 @@
-name: Build Hugo
+name: Build Hugo and deploy to GH Pages
 on:
   push:
     branches:
@@ -8,18 +8,10 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: Check out code
-      uses: actions/checkout@master
-    - name: Build Hugo
-      uses: lowply/build-hugo@v0.58.2
-    - name: Commit build
-      uses: EndBug/add-and-commit@v2.1.0
-      with:
-        author_name: Github Action
-        author_email: michael@tricht.dev
-        message: "Automatic hugo build."
-        path: "."
-        pattern: "*"
-        force: false
+    steps:
+    - uses: actions/checkout@master
+    - name: hugo-deploy-gh-pages
+      uses: khanhicetea/gh-actions-hugo-deploy-gh-pages@master
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GIT_DEPLOY_KEY: ${{ secrets.GIT_DEPLOY_KEY }}
+        HUGO_VERSION: "0.58.3"
