@@ -10,8 +10,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-    - name: Git Submodules Init
-      uses: chris-short/github-action-git-submodules@v0.1.0
+      with:
+        submodules: true
     - name: Build and deploy
       uses: khanhicetea/gh-actions-hugo-deploy-gh-pages@master
       env:
