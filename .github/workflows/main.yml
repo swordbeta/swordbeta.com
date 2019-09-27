@@ -12,3 +12,14 @@ jobs:
       uses: actions/checkout@master
     - name: Build Hugo
       uses: lowply/build-hugo@v0.58.2
+    - name: Commit build
+      uses: EndBug/add-and-commit@v2.1.0
+      with:
+        author_name: Github Action
+        author_email: michael@tricht.dev
+        message: "Automatic hugo build."
+        path: "."
+        pattern: "*"
+        force: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
