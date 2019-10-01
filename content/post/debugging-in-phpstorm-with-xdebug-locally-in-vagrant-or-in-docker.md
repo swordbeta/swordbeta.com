@@ -41,7 +41,7 @@ With `xdebug.remote_enable` we enable the debugging features of Xdebug to be deb
 With `xdebug.remote_autostart` Xdebug will try to automatically debug every time you run anything in PHP. Normally you'd have to set a certain HTTP header when doing a HTTP request or add a certain PHP command line flag to your `php` command from the terminal. With this enabled you don't have to set any HTTP header or command line flag.
 
 #### Docker and Vagrant
-If you're following this guide whilst your application runs in ocker or Vagrant, you'll need to include the `xdebug.remote_host` configuration. With `xdebug.remote_host` you tell Xdebug to connect to a certain host when debugging. By default this is `localhost` but for Docker you need the default gateway which is aliased to `host.docker.internal` or for Vagrant `10.0.2.2`.  
+If you're following this guide whilst your application runs in Docker or Vagrant, you'll need to include the `xdebug.remote_host` configuration. With `xdebug.remote_host` you tell Xdebug to connect to a certain host when debugging. By default this is `localhost` but for Docker you need the default gateway which is aliased to `host.docker.internal` or for Vagrant `10.0.2.2`.  
 
 ~~~ini
 xdebug.remote_host=host.docker.internal
