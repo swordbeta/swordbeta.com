@@ -6,7 +6,7 @@ draft = false
 
 Hi, I'm Michael van Tricht from The Netherlands. I started freelancing as a teenager in 2008, graduated as a Software Engineer in 2015 and have been working as a Full Stack Developer ever since. My main technologies are Java, React, iOS,  and Kubernetes.
 
-In my free time I like tinkering on open source projects such as:
+In my free time I like working on open source projects such as:
 
 - [Lunaris](https://github.com/mtricht/lunaris) - a program that helps you price in-game items in the game Path of Exile.
 - [Gamesense Essentials](https://github.com/mtricht/gamesense-essentials) - customizes the OLED screen present on certain SteelSeries products such as keyboards, mice, headsets and more.
