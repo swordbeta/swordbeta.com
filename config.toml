@@ -30,7 +30,8 @@ pygmentscodefencesguesssyntax = true
     hidecredits = true
     hidecopyright = true
 
-    inverted = true
+    colorscheme = "dark"
+    custom_css = ["css/extra.css"]
 
 # Social links
 [[params.social]]
