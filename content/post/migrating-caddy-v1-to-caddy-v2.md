@@ -5,7 +5,7 @@ title = "Migrating Caddy v1 to v2 using Caddyfile"
 slug = "migrating-caddy-v1-to-v2" 
 +++
 
-I like using [Caddy](https://caddyserver.com/) for automatic SSL certificates using [Let's Encrypt](https://letsencrypt.org/).
+I like using [Caddy](https://caddyserver.com/) as a HTTPS server with automatic SSL certificates using [Let's Encrypt](https://letsencrypt.org/).
 With a few configuration lines you can get up and running in no time.
 
 Recently I switched VPS providers and ended up having to migrate Caddy from v1 to v2. The documentation for Caddy is wonderful and chockful with emojis. The [getting started](https://caddyserver.com/docs/getting-started#your-first-caddyfile) tutorial starts by telling you how a Caddyfile looks like in v2, where my confusion started. As I mostly need reverse proxies, the very first example there looks like this:
