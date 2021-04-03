@@ -58,6 +58,6 @@ Other pieces of software that I self-host that are worth mentioning but are rath
 Having listed of the software I self-host, there are still a few on my wishlist to try out:
 
 - [Gitea](https://gitea.io/en-us/) - "Git with a cup of tea. A painless self-hosted Git service." which looks an awful lot like GitHub.
-- [Drone](http://try.drone.io/) - "Continuous delivery · built on docker"
+- [Drone](https://drone.io/) - "Continuous delivery · built on docker"
 
 If you're looking for more software to self-host, checkout the [awesome-selfhosted](https://github.com/Kickball/awesome-selfhosted) page on GitHub.
